@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Tab UI</title>
+    <link rel="stylesheet" href="main.css">
+    <link id="tabStyle" rel="stylesheet" href="video1.css"> <!-- Default ke video1.css -->
+    <link rel="stylesheet" href="youtube1.css"> <!-- Tambahkan CSS YouTube -->
+</head>
+<body>
+
+    <!-- Tombol Gir (Settings) -->
+    <button class="settings-btn" onclick="openSettings()">
+        ⚙
+    </button>
+
+    <div class="tab-container">
+        <button class="tab-btn" onclick="openTab('tab1', 'video1.css')">Tab 1</button>
+        <button class="tab-btn" onclick="openTab('tab2', 'youtube1.css')">Tab 2</button>
+        <button class="tab-btn" onclick="openTab('tab3', 'iframe1.css')">Tab 3</button> <!-- Tab 3 -->
+    </div>
+
+    <div id="tab1" class="tab-content">
+        <h2>Video Player</h2>
+
+        <!-- Tombol Upload -->
+        <div class="upload-buttons">
+            <button class="upload-btn" onclick="uploadSingleFile()">
+                📄 Upload via Single File
+            </button>
+            <button class="upload-btn" onclick="uploadDirectory()">
+                📁 Upload via Direktori
+            </button>
+        </div>
+
+        <!-- Input dan Tombol Submit -->
+        <div class="video-input-container">
+            <input type="text" id="videoLink" placeholder="Masukkan link video...">
+            <button class="submit-btn" onclick="loadVideo()">Submit</button>
+        </div>
+
+        <!-- Video Container -->
+        <div class="video-container">
+            <button class="prev-btn">&#10094;</button>
+            <video controls id="videoPlayer">
+                <source src="video.mp4" type="video/mp4">
+                Browser Anda tidak mendukung pemutar video.
+            </video>
+            <button class="next-btn">&#10095;</button>
+        </div>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <h2>Tab 2 - Konten</h2>
+        <p>Ini adalah isi dari Tab 2.</p>
+
+        <!-- Input dan Tombol Submit untuk YouTube -->
+        <div class="video-input-container">
+            <input type="text" id="youtubeLink" placeholder="Masukkan ID atau link YouTube...">
+            <button class="submit-btn" onclick="addYouTubeVideo()">Submit</button>
+        </div>
+
+        <!-- Kontainer untuk Iframe YouTube -->
+        <div id="youtubeContainer"></div>
+    </div>
+
+    <div id="tab3" class="tab-content"> <!-- Tab 3 -->
+      <h2>Iframe</h2>
+  
+      <!-- Input dan Tombol Submit -->
+      <div class="video-input-container">
+          <input type="text" id="iframeLink" placeholder="Masukkan link iframe...">
+          <button class="open-modal-btn" onclick="openIframeModal()">Open Modal</button>
+      </div>
+  </div>
+
+  <!-- Modal Iframe -->
+<div id="uniqueIframeModal" class="unique-modal"> <!-- ID untuk modal iframe yang unik -->
+  <div class="unique-modal-content"> <!-- Kelas untuk konten modal yang unik -->
+      <!-- Konten iframe akan ditambahkan melalui JavaScript -->
+  </div>
+</div>
+
+    <!-- Modal Settings -->
+    <div id="settingsModal" class="modal-settings">
+        <div class="modal-settings-content">
+            <div class="modal-settings-header">
+                <h2>Settings</h2>
+                <button class="close-settings-btn" onclick="closeSettings()">✖</button>
+            </div>
+            <div class="modal-settings-body">
+                <p>Video Player</p>
+                <div class="number-buttons">
+                    <button class="num-btn" onclick="changeVideoSize('video1.css')">📱</button>
+                    <button class="num-btn" onclick="changeVideoSize('video2.css')">💻</button>
+                </div>
+
+                <!-- Daftar Tab 2 -->
+                <h3>Tab 2</h3>
+                <button class="btn-tab2" onclick="useTab2Option(1)">1</button>
+                <button class="btn-tab2" onclick="useTab2Option(2)">2</button>
+
+                <!-- Daftar Iframe -->
+                <h3>Iframe</h3>
+                <button class="iframe-btn" onclick="changeIframeStyle('iframe1.css')">1</button>
+                <button class="iframe-btn" onclick="changeIframeStyle('iframe2.css')">2</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="loadvideolink.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

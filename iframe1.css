@@ -1,0 +1,37 @@
+/* Modal Iframe */
+.unique-modal {
+  display: none; /* Modal tidak ditampilkan secara default */
+  position: fixed; /* Mengatur posisi menjadi fixed */
+  top: 50%; /* Mengatur posisi atas menjadi 50% */
+  left: 50%; /* Mengatur posisi kiri menjadi 50% */
+  width: 80%; /* Mengatur lebar modal menjadi 80% dari layar */
+  max-width: 600px; /* Mengatur lebar maksimal modal */
+  height: auto; /* Mengatur tinggi otomatis */
+  background: rgba(255, 255, 255, 1); /* Latar belakang putih */
+  transform: translate(-50%, -50%); /* Memusatkan modal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+  z-index: 1000; /* Menjaga agar modal tetap di atas */
+}
+
+/* Konten Modal */
+.unique-modal-content {
+  padding: 20px; /* Menambahkan padding untuk konten modal */
+}
+
+/* Iframe */
+.unique-iframe {
+  width: 100%; /* Mengatur lebar iframe menjadi 100% */
+  height: 400px; /* Mengatur tinggi iframe menjadi 400px */
+  border: none; /* Menghapus border */
+}
+
+/* Tombol Close */
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}

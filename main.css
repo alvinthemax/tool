@@ -1,0 +1,123 @@
+/* Tombol Settings (Gir) */
+.settings-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Modal Settings */
+.modal-settings {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Kontainer Modal Settings */
+.modal-settings-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+/* Header Modal Settings */
+.modal-settings-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Pusatkan teks */
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ccc; /* Garis bawah */
+  width: 100%;
+}
+
+.modal-settings-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+/* Tombol Close Modal Settings */
+.close-settings-btn {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Body Modal Settings */
+.modal-settings-body {
+  margin-top: 15px;
+}
+
+/* Tombol Pilihan di Modal Settings */
+.number-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.num-btn {
+  font-size: 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.num-btn:hover {
+  background: #0056b3;
+}
+
+/* Tab Container */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 10px;
+}
+
+/* Tab Button */
+.tab-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.tab-btn:hover {
+  background: #0056b3;
+}
+
+/* Konten Tab */
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  background: white;
+}

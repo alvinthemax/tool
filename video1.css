@@ -1,0 +1,117 @@
+h2 {
+  color: blue;
+  font-size: 24px;
+}
+
+/* Kontainer Video */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 250px; /* Ukuran kecil untuk mobile */
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Video Player */
+.video-container video {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Tombol Prev dan Next */
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Container Tombol Upload */
+.upload-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Tombol Upload */
+.upload-btn {
+  padding: 8px 16px; /* Lebih kecil untuk mobile */
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Ukuran font lebih kecil */
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.upload-btn:hover {
+  background: #218838;
+}
+
+/* Container Input dan Tombol Submit */
+.video-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input Link Video */
+#videoLink {
+  padding: 8px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  width: 200px; /* Lebar lebih kecil untuk mobile */
+  font-size: 14px; /* Ukuran font lebih kecil */
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#videoLink:focus {
+  border-color: #0056b3;
+}
+
+/* Tombol Submit */
+.submit-btn {
+  padding: 8px 16px; /* Lebih kecil untuk mobile */
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Ukuran font lebih kecil */
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
